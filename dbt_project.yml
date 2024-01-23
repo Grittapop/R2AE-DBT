@@ -39,4 +39,14 @@ models:
   my_new_project:
     # Applies to all files under models/example/
     example:
-      +materialized: table
+      materialized: view
+    raw:
+      schema: raw
+      materialized: view
+    tnfm:
+      schema: tnfm
+      materialized: table
+      
+
+seeds:
+  schema: raw
